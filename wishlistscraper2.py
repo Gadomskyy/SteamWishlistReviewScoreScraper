@@ -12,7 +12,7 @@ def get_html(url):
     s.headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
     response = s.get(url)
     #sleep zeby nie bylo za duzo requestow naraz
-    sleep(1)
+    sleep(0.3)
     if not response.ok:
         print(f'{response.status_code}, URL: {url} Error')
     return response.text
